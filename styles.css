@@ -25,6 +25,16 @@ nav {
 	width: 100%;
 }
 
+ul {
+	justify-content: center;
+	width: 100%;	
+}
+
+li {
+	list-style: none;
+	margin: 5px;
+}
+
 h1 {
 	width: 70%;
 }
@@ -38,10 +48,25 @@ article {
 	border: 2px solid black;
 }
 
+p {
+	align-self: center;
+	text-align: center;
+	height: 60%;}
+
 aside {
 	border: 2px solid black;
 	flex-wrap: wrap;
 	grid-area: aside;
+}
+
+form {
+	width: 100%;
+}
+
+input {
+	height: 20%;
+  margin: 5px;
+	width: 94%;
 }
 
 footer {
@@ -61,6 +86,15 @@ footer {
 	height: 47%;
 	margin: 5px auto;
 	width: 90%;
+}
+
+.top-aside {
+	flex-wrap: wrap;
+}
+
+.aside-submit-link {
+	text-align: center;
+  letter-spacing: 3px;
 }
 
 .right-main,

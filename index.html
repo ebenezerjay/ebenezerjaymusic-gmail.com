@@ -11,19 +11,35 @@
   <header class="flex">
 		<h1>Your Spot for Independent Music Live Streams</h1>
 		<nav class="flex">
-
+			<ul class="flex">
+				<li>
+					<label for="navSearchOptions">Search live streams by...</label>
+					<select name="navSeachOptions" id="nav-search-options">
+						<option value="Date">Date</option>
+						<option value="Genre">Genre</option>
+						<option value="Platform">Platform</option>
+						<option value="artistName">Name of Artist or Band</option>
+					</select>
+				</li>
+				<li><a href=""> Submit a live stream to the guide</a></li>
+			</ul>
 		</nav>
 	</header>
 	<aside class="flex">
 		<article class="flex top-aside">
 			<p>
-
+				Help this site and independent artists grow by submitting your favorite music live streams.
 			</p>
+			<a href="" class="aside-submit-link" id="aside-submit-link-id">Submit a live stream here</a>
 		</article>
 		<article class="flex bottom-aside">
-			<p>
-
-			</p>
+			<form action="submitLiveStream.php" method="POST" class=" aside-submit-form" id="aside-submit-form-id">
+				<input type="text" name="asideFormName" class="aside-form-name" id="aside-form-name-id" placeholder="Enter name of artist">
+				<input type="text" name="asideFormDate" class="aside-form-date" id="aside=form-date-id" placeholder="Enter Date">
+				<input type="text" name="asideFormGenre" class="aside-form-genre" id="aside=form-genre-id-" placeholder="Enter Genre">
+				<input type="text" name="asideFormPlatform" class="aside-form-platform" id="aside=form-platform-" placeholder="Enter streaming platform">
+				<button name="aside-submit-btn" class="aside-submit-btn" id="aside-submit-btn-id">Submit live stream</button>
+			</form>
 		</article>
 	</aside>
 	<main class="flex">

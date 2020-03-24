@@ -1,1 +1,1 @@
-The purpose of this website is to provide a central location for independent music live streams. A place where users can see live streams from multiple different platforms such as YouTube, Facebook, Instagram, Vimeo or anywhere else. 
+# ebenezerjaymusic-gmail.com
