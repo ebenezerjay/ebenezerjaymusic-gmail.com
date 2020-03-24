@@ -1,0 +1,70 @@
+/* element selectors */
+body {
+	display: grid;
+	grid-template-columns: 15% 40% 45%;
+	grid-template-areas: 
+	"aside header header"
+	"aside main main"
+	"aside main main"
+	"aside main main"
+	"aside main main"
+	"footer footer footer";
+	height: 100vh;
+}
+
+header {
+	border: 2px solid black;
+	flex-wrap: wrap;
+	grid-area: header;
+	justify-content: center;
+}
+
+nav {
+	border: 2px solid black;
+	margin: 5px;
+	width: 100%;
+}
+
+h1 {
+	width: 70%;
+}
+
+main {
+	border: 2px solid black;
+	grid-area: main;
+}
+
+article {
+	border: 2px solid black;
+}
+
+aside {
+	border: 2px solid black;
+	flex-wrap: wrap;
+	grid-area: aside;
+}
+
+footer {
+	border: 2px solid black;
+	grid-area: footer;
+	margin-top: 5px
+}
+
+/* class selectors */
+
+.flex {
+	display: flex;
+}
+
+.top-aside,
+.bottom-aside {
+	height: 47%;
+	margin: 5px auto;
+	width: 90%;
+}
+
+.right-main,
+.left-main {
+	margin: 5px;
+	width: 50%;
+}
