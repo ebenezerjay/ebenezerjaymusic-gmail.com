@@ -1,5 +1,7 @@
 /* element selectors */
 body {
+	font-family: 'Walter Turncoat', cursive;
+
 	display: grid;
 	grid-template-columns: 15% 40% 45%;
 	grid-template-areas: 
@@ -36,6 +38,9 @@ li {
 }
 
 h1 {
+	height: 11%;
+	margin-bottom: 0px;
+	text-align: center;
 	width: 70%;
 }
 
@@ -60,13 +65,19 @@ aside {
 }
 
 form {
+	align-self: center;
+	border: 2px solid black;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 5px;
+	padding: 1em;
 	width: 100%;
 }
 
 input {
-	height: 20%;
-  margin: 5px;
-	width: 94%;
+	height: 100%;
+	margin: 5px;
+	width: 50%;
 }
 
 footer {
@@ -90,11 +101,18 @@ footer {
 
 .top-aside {
 	flex-wrap: wrap;
+	letter-spacing: 3px;
 }
 
-.aside-submit-link {
-	text-align: center;
-  letter-spacing: 3px;
+.form-left,
+.form-right {
+	width: 100%;
+}
+
+.form-bottom {
+	justify-content: center;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .right-main,
