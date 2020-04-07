@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="indieStyles.css">
+	<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat&display=swap" rel="stylesheet">
+	<title>Indie Live Streams</title>
+</head>
+<body>
+  <header class="flex">
+		<h1>Live Music Streaming Schedule/Under Construction</h1>
+		<nav class="flex">
+			<ul class="flex">
+				<li>
+					<label for="navSearchOptions">Search live streams by...</label>
+					<select name="navSeachOptions" id="nav-search-options">
+						<option value="Date">Date</option>
+						<option value="Genre">Genre</option>
+						<option value="Platform">Platform</option>
+						<option value="artistName">Name of Artist or Band</option>
+					</select>
+				</li>
+			</ul>
+		</nav>
+		<form action="submitForm.php" method="POST" class="flex form-submit" id="form-submit-id">
+			<div class="flex form-left" id="form-left-id">
+				<input type="text" name="formName" class="form-name" id="form-name-id" placeholder="Name of artist" required>
+				<input type="text" name="formGenre" class="form-genre" id="form-genre-id-" placeholder="Genre">
+				<input type="text" name="formStreamTime" class="form-streamTime" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
+			</div>
+			<div class="flex form-right" id="form-right-id">
+				<input type="date" name="formStreamDate" class="form-stream-date" id="form-stream-date-id" placeholder="Stream Date" required>
+				<input type="text" name="formPlatform" class="form-platform" id="form-platform-id" placeholder="Streaming platform">
+				<input type="text" name="formStreamLink" class="form-stream-link" id="form-stream-link-id" placeholder="Link to live stream" required>
+			</div>
+			<div class="flex form-bottom" id="form-bottom-id">
+				<button type="submit" name="formSubmitBtn" class="form-submit-btn" id="form-submit-btn-id">Submit live stream</button>
+			</div>
+		</form>
+	</header>
+	<aside class="flex">
+		<article class="flex top-aside">
+			<p>
+				Help this site and independent artists grow by submitting your favorite music live streams.
+			</p>
+		</article>
+		<article class="flex bottom-aside">
+		</article>
+	</aside>
+	<main class="flex">
+		<article class=" main-article-table">
+			<h3>Upcoming Live Streams</h3>
+			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
+				<thead class="flex">
+					<th name="artistName" class="th-artist-name" dragable="true" >Artist Name</th>
+					<th name="streamDate" class="th-stream-date" dragable="true">Stream Date</th>
+					<th name="streamTime" class="flex th-stream-time" dragable="true">Time</th>
+					<th name="streamLink" class="flex th-stream-link" dragable="true">Stream Link</th>
+					<th name="genre" class="flex th-genre" dragable="true">Genre</th>
+					<th name="platform" class="flex th-platform" dragable="true">Platform</th>
+				</thead>
+			<tbody class="flex" id="data">
+
+			</tbody>
+			</table>
+		</article>
+	</main>
+	<footer>
+
+	</footer>
+</body>
+<script src="indieMain.js"></script>
+</html>

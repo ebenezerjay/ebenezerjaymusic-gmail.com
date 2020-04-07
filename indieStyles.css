@@ -44,6 +44,13 @@ h1 {
 	width: 70%;
 }
 
+h3 {
+	color: firebrick;
+	height: 11%;
+	margin: 10px 0px 0px 0px;
+	text-align: center;
+}
+
 main {
 	border: 2px solid black;
 	grid-area: main;
@@ -75,9 +82,44 @@ form {
 }
 
 input {
-	height: 100%;
+	height: 2em;
 	margin: 5px;
 	width: 50%;
+}
+
+table {
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+tbody {
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+tr {
+	display: flex;
+	width: 100%;
+}
+
+td {
+	border: 1px solid black;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 17%;
+}
+
+td:hover {
+	overflow: visible;
+}
+
+th {
+	border: 1px solid black;
+	width: 17%;
+}
+
+thead {
+	width: 100%;
 }
 
 footer {
@@ -106,6 +148,7 @@ footer {
 
 .form-left,
 .form-right {
+	height: fit-content;
 	width: 100%;
 }
 
@@ -115,8 +158,7 @@ footer {
 	margin-top: 10px;
 }
 
-.right-main,
-.left-main {
+.main-article-table {
 	margin: 5px;
-	width: 50%;
+	width: 100%;
 }
