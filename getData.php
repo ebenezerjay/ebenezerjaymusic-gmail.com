@@ -15,12 +15,12 @@ $sel = mysqli_query($retreiveData,"SELECT * FROM streamerData limit 20");
 	$submissions = mysqli_fetch_all($sel,MYSQLI_ASSOC);
 	foreach($submissions as $submission) : ?>
 		<tr id="tr-id">
-				<td dragable="true" ><?php echo $submission['artistName']; ?> </td>
-				<td dragable="true"><?php echo $submission['streamDate']; ?> </td>
-				<td dragable="true"><?php echo $submission['streamTime']; ?> </td>
-				<td dragable="true"><?php echo $submission['link']; ?> </td>
-				<td dragable="true"><?php echo $submission['genre']; ?> </td>
-				<td dragable="true"><?php echo $submission['platform']; ?> </td>
+			<td dragable="true" class="td-name"><?php echo $submission['artistName']; ?> </td>
+			<td dragable="true" class="td-date"><?php echo $submission['streamDate']; ?> </td>
+			<td dragable="true" class="td-time"><?php echo $submission['streamTime']; ?> </td>
+			<td dragable="true" class="td-link"><?php echo $submission['link']; ?> </td>
+			<td dragable="true" class="td-genre"><?php echo $submission['genre']; ?> </td>
+			<td dragable="true" class="td-platform"><?php echo $submission['platform']; ?> </td>
 		</tr>
 		<?php endforeach;
  }
