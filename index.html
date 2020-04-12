@@ -25,16 +25,16 @@
 				</li>
 			</ul>
 		</nav>
-		<form action="submitForm.php" method="POST" class="flex form-submit" id="form-submit-id">
+		<form action="" method="POST" class="flex form-submit" id="form-submit-id">
 			<div class="flex form-left" id="form-left-id">
 				<input type="text" name="formName" class="form-name" id="form-name-id" placeholder="Name of artist" required>
 				<input type="text" name="formGenre" class="form-genre" id="form-genre-id-" placeholder="Genre">
-				<input type="text" name="formStreamTime" class="form-streamTime" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
+				<input type="time" name="formStreamTime" class="form-streamTime" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
 			</div>
 			<div class="flex form-right" id="form-right-id">
 				<input type="date" name="formStreamDate" class="form-stream-date" id="form-stream-date-id" placeholder="Stream Date" required>
 				<input type="text" name="formPlatform" class="form-platform" id="form-platform-id" placeholder="Streaming platform">
-				<input type="text" name="formStreamLink" class="form-stream-link" id="form-stream-link-id" placeholder="Link to live stream" required>
+				<input type="url" name="formStreamLink" class="form-stream-link" id="form-stream-link-id" placeholder="Link to live stream" required>
 			</div>
 			<div class="flex form-bottom" id="form-bottom-id">
 				<button type="submit" name="formSubmitBtn" class="form-submit-btn" id="form-submit-btn-id">Submit live stream</button>

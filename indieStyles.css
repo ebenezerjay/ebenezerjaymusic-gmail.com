@@ -162,3 +162,7 @@ footer {
 	margin: 5px;
 	width: 100%;
 }
+
+.td-link:hover {
+	width: 50%;
+}
