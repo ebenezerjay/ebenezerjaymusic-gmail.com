@@ -8,6 +8,7 @@ const streamTimeInput = $("#form-stream-time-id");
 const streamLinkInput = $("form-stream-link-id");
 const table = $("table-upcoming-id");
 const submitBtn = $("#form-submit-btn-id");
+const artistSearchOption = $("#artist-name-id");
 
 
 $(document).ready(function() {
@@ -16,22 +17,24 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	console.log("yo1");
+	$(artistSearchOption).on('click', function() {
+		console.log("yo2");
+		$.post("sort.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
 $( "#form-submit-id" ).submit(function(e) {
   // Stop form from submitting normally
   e.preventDefault();
 
+	// serialize the form data
 	let	formData = $(this).serialize();
-  // let url = $form.attr("action");
  
   // Send the data using post
 	$.post( "submitForm.php", formData);
 });
 
-// $(document).ready(function() {
-// 	$(submitBtn).on('click', function() {
-// 		// $(submitBtn).prop('disabled', true);
-// 		$.post("submitForm.php", $("#form-sumbit-id").serialize(), function(data) {
-			
-// 		});
-// 	});
-// });
