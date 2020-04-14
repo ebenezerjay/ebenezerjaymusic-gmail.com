@@ -17,10 +17,11 @@
 				<li>
 					<label for="navSearchOptions">Search live streams by...</label>
 					<select name="navSeachOptions" id="nav-search-options">
-						<option value="Date">Date</option>
-						<option value="Genre">Genre</option>
-						<option value="Platform">Platform</option>
-						<option value="artistName">Name of Artist or Band</option>
+						<option value="option-artist-name-id"></option>
+						<option value="artist name" id="">Artist Name</option>
+						<option value="stream date">Date</option>
+						<option value="genre">Genre</option>
+						<option value="platform">Hosting Platform</option>
 					</select>
 				</li>
 			</ul>
@@ -55,12 +56,12 @@
 			<h3>Upcoming Live Streams</h3>
 			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
 				<thead class="flex">
-					<th name="artistName" class="th-artist-name" dragable="true" >Artist Name</th>
-					<th name="streamDate" class="th-stream-date" dragable="true">Stream Date</th>
-					<th name="streamTime" class="flex th-stream-time" dragable="true">Time</th>
-					<th name="streamLink" class="flex th-stream-link" dragable="true">Stream Link</th>
-					<th name="genre" class="flex th-genre" dragable="true">Genre</th>
-					<th name="platform" class="flex th-platform" dragable="true">Platform</th>
+					<th name="artistName" class="th-artist-name" id="artist-name-id">Artist Name</th>
+					<th name="streamDate" class="th-stream-date">Stream Date</th>
+					<th name="streamTime" class="flex th-stream-time">Time</th>
+					<th name="streamLink" class="flex th-stream-link">Stream Link</th>
+					<th name="genre" class="flex th-genre">Genre</th>
+					<th name="platform" class="flex th-platform">Platform</th>
 				</thead>
 			<tbody class="flex" id="data">
 
