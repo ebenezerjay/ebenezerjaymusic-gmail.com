@@ -8,16 +8,13 @@ if ($sortDisplayData->connect_error) {
 } 
 
 // select table data and sort by name
-$nameSortQuery = "SELECT artistName, streamDate, streamTime, link, genre, platform FROM streamerData ORDER BY artistName";
-
-// data collected from query
-$result = $conn->query($nameSortQuery);
+$nameSortQuery = mysqli_query($sortDisplayData,"SELECT artistName, streamDate, streamTime, link, genre, platform FROM streamerData ORDER BY artistName");
 
 // output data of each row
 if(mysqli_num_rows($nameSortQuery) > 0) {
 	$submissions = mysqli_fetch_all($nameSortQuery,MYSQLI_ASSOC);
 	foreach($submissions as $submission) : ?>
-		<tr id="tr-id">
+		<tr id="tr-id-name-sort">
 			<td dragable="true" class="td-name"><?php echo $submission['artistName']; ?> </td>
 			<td dragable="true" class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td dragable="true" class="td-time"><?php echo $submission['streamTime']; ?> </td>
@@ -27,12 +24,4 @@ if(mysqli_num_rows($nameSortQuery) > 0) {
 		</tr>
 		<?php endforeach;
  }
-
-
-
-
-
-
-
-
 ?>

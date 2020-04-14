@@ -8,7 +8,7 @@ const streamTimeInput = $("#form-stream-time-id");
 const streamLinkInput = $("form-stream-link-id");
 const table = $("table-upcoming-id");
 const submitBtn = $("#form-submit-btn-id");
-const artistSearchOption = $("#artist-name-id");
+const artistSearchRow = $("#th-artist-name-id");
 
 
 $(document).ready(function() {
@@ -18,9 +18,9 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	console.log("yo1");
-	$(artistSearchOption).on('click', function() {
-		console.log("yo2");
+	console.log("yo");
+	$(artistSearchRow).on('click', function() {
+		console.log("yo1");
 		$.post("sort.php", function(data) {
 			$("tbody").html(data);
 		});
@@ -35,6 +35,6 @@ $( "#form-submit-id" ).submit(function(e) {
 	let	formData = $(this).serialize();
  
   // Send the data using post
-	$.post( "submitForm.php", formData);
+	$.post( "sort.php", formData);
 });
 
