@@ -18,10 +18,17 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	console.log("yo");
 	$(artistSearchRow).on('click', function() {
-		console.log("yo1");
 		$.post("sort.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+$(document).ready(function() {
+	let dateSearchRow = $("th-stream-date-id");
+	$(dateSearchRow).on('click', function() {
+		$.post("sortDate.php", function(data) {
 			$("tbody").html(data);
 		});
 	});
