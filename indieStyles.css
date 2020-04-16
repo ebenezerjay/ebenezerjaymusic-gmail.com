@@ -19,17 +19,20 @@ header {
 	flex-wrap: wrap;
 	grid-area: header;
 	justify-content: center;
+	width: 100%;
 }
 
 nav {
+	align-self: center;
 	border: 2px solid black;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 5px;
 	width: 100%;
 }
 
 ul {
-	justify-content: center;
-	width: 100%;	
+	width: 50%;	
 }
 
 li {
@@ -134,6 +137,22 @@ footer {
 	display: flex;
 }
 
+.nav-ul-label {
+	align-self: center;
+	width: 50%;
+}
+
+.nav-bottom {
+	justify-content: center;
+	margin: 10px;
+	width: 100%;
+}
+
+.nav-search-btn:hover {
+	color: blue;
+	cursor: pointer;
+}
+
 .top-aside,
 .bottom-aside {
 	height: 47%;
@@ -165,4 +184,9 @@ footer {
 
 .td-link:hover {
 	width: 50%;
+}
+
+.th-styles:hover {
+	cursor: pointer;
+	color: blue;
 }

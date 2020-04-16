@@ -13,18 +13,10 @@
   <header class="flex">
 		<h1>Live Music Streaming Schedule/Under Construction</h1>
 		<nav class="flex">
-			<ul class="flex">
-				<li>
-					<label for="navSearchOptions">Search live streams by...</label>
-					<select name="navSeachOptions" id="nav-search-options">
-						<option value="option-artist-name-id"></option>
-						<option value="artist name" id="">Artist Name</option>
-						<option value="stream date">Date</option>
-						<option value="genre">Genre</option>
-						<option value="platform">Hosting Platform</option>
-					</select>
-				</li>
-			</ul>
+			<input name="nav-search-input" type="search" class="nav-search-input" id="nav-search-input-id" placeholder="Search the live streams">
+			<div class="flex nav-bottom">
+				<button type="button" name="nav-search-btn" class="nav-search-btn" id="nav-search-btn-id">Submit Search</button>
+			</div>
 		</nav>
 		<form action="" method="POST" class="flex form-submit" id="form-submit-id">
 			<div class="flex form-left" id="form-left-id">
@@ -56,12 +48,12 @@
 			<h3>Upcoming Live Streams</h3>
 			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
 				<thead class="flex">
-					<th name="artistName" class="th-artist-name" id="th-artist-name-id">Artist Name</th>
-					<th name="streamDate" class="th-stream-date" id="th-stream-date-id">Stream Date</th>
-					<th name="streamTime" class="flex th-stream-time" id="th-stream-time-id">Time</th>
-					<th name="streamLink" class="flex th-stream-link" id="th-stream-link-id">Stream Link</th>
-					<th name="genre" class="flex th-genre" id="th-genre-id">Genre</th>
-					<th name="platform" class="flex th-platform" id="th-platform-id">Platform</th>
+					<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
+					<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+					<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
+					<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
+					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
+					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
 				</thead>
 			<tbody class="flex" id="data">
 
