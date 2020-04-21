@@ -5,46 +5,49 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
 	<link rel="stylesheet" href="indieStyles.css">
 	<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat&display=swap" rel="stylesheet">
 	<title>Indie Live Streams</title>
 </head>
 <body>
-  <header class="flex">
+  <header class="flex border">
 		<h1>Live Music Streaming Schedule/Under Construction</h1>
-		<nav class="flex">
-			<input name="nav-search-input" type="search" class="nav-search-input" id="nav-search-input-id" placeholder="Search the live streams">
-			<div class="flex nav-bottom">
-				<button type="button" name="nav-search-btn" class="nav-search-btn" id="nav-search-btn-id">Submit Search</button>
-			</div>
+		<nav class="flex border">
+			<form action="" method="POST" class="flex" id="form-search-id">
+				<input name="navSearchInput" type="text" class="nav-search-input border" id="nav-search-input-id" placeholder="Search the live streams" required>
+				<div class="flex nav-bottom">
+					<button type="submit" name="navSearchBtn" class="nav-search-btn border" id="nav-search-btn-id">Submit Search</button>
+				</div>
+			</form>
 		</nav>
-		<form action="" method="POST" class="flex form-submit" id="form-submit-id">
+		<form action="" method="POST" class="flex border form-submit" id="form-submit-id">
 			<div class="flex form-left" id="form-left-id">
-				<input type="text" name="formName" class="form-name" id="form-name-id" placeholder="Name of artist" required>
-				<input type="text" name="formGenre" class="form-genre" id="form-genre-id-" placeholder="Genre">
-				<input type="time" name="formStreamTime" class="form-streamTime" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
+				<input type="text" name="formName" class="form-name border" id="form-name-id" placeholder="Name of artist" required>
+				<input type="text" name="formGenre" class="form-genre border" id="form-genre-id-" placeholder="Genre">
+				<input type="text" name="formStreamTime" class="form-streamTime border" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
 			</div>
 			<div class="flex form-right" id="form-right-id">
-				<input type="date" name="formStreamDate" class="form-stream-date" id="form-stream-date-id" placeholder="Stream Date" required>
-				<input type="text" name="formPlatform" class="form-platform" id="form-platform-id" placeholder="Streaming platform">
-				<input type="url" name="formStreamLink" class="form-stream-link" id="form-stream-link-id" placeholder="Link to live stream" required>
+				<input type="date" name="formStreamDate" class="form-stream-date border" id="form-stream-date-id" placeholder="Stream Date" required>
+				<input type="text" name="formPlatform" class="form-platform border" id="form-platform-id" placeholder="Streaming platform">
+				<input type="url" name="formStreamLink" class="form-stream-link border" id="form-stream-link-id" placeholder="Link to live stream" required>
 			</div>
 			<div class="flex form-bottom" id="form-bottom-id">
-				<button type="submit" name="formSubmitBtn" class="form-submit-btn" id="form-submit-btn-id">Submit live stream</button>
+				<button type="submit" name="formSubmitBtn" class="form-submit-btn border" id="form-submit-btn-id">Submit live stream</button>
 			</div>
 		</form>
 	</header>
-	<aside class="flex">
-		<article class="flex top-aside">
+	<aside class="flex border">
+		<article class="flex top-aside border">
 			<p>
 				Help this site and independent artists grow by submitting your favorite music live streams.
 			</p>
 		</article>
-		<article class="flex bottom-aside">
+		<article class="flex bottom-aside border">
 		</article>
 	</aside>
-	<main class="flex">
-		<article class=" main-article-table">
+	<main class="flex border">
+		<article class="border main-article-table">
 			<h3>Upcoming Live Streams</h3>
 			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
 				<thead class="flex">
@@ -55,13 +58,13 @@
 					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
 					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
 				</thead>
-			<tbody class="flex" id="data">
+			<tbody class="flex border" id="data">
 
 			</tbody>
 			</table>
 		</article>
 	</main>
-	<footer>
+	<footer class="flex border">
 
 	</footer>
 </body>

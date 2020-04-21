@@ -13,11 +13,24 @@ const dateSearchRow = $("#th-stream-date-id");
 const timeSearchRow = $("#th-stream-time-id");
 const genreSearchRow = $("#th-genre-id");
 const platformSearchRow = $("#th-platform-id");
+const navSearchInput = $("#nav-search-input-id");
+const navSearchBtn = $("#nav-search-btn-id");
 
 
 // gets all table data on page load
 $(document).ready(function() {
 	$.post("getData.php", function(data) {
+		$("tbody").html(data);
+	});
+});
+
+// sends ajax to search php page
+$( "#form-search-id" ).submit(function(e) {
+  e.preventDefault();
+	// serialize the form data
+	let	formData = $(this).serialize();
+  // Send the data using post
+	$.post( "search.php", formData,function(data) {
 		$("tbody").html(data);
 	});
 });
@@ -30,6 +43,7 @@ $(document).ready(function() {
 		});
 	});
 });
+
 
 // table is sorted by date
 $(document).ready(function() {
@@ -73,6 +87,7 @@ $( "#form-submit-id" ).submit(function(e) {
 	// serialize the form data
 	let	formData = $(this).serialize();
   // Send the data using post
-	$.post( "sort.php", formData);
+	$.post( "submitForm.php", formData);
 });
+
 

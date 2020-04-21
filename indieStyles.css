@@ -1,7 +1,7 @@
 /* element selectors */
 body {
+	background-color: #002544;
 	font-family: 'Walter Turncoat', cursive;
-
 	display: grid;
 	grid-template-columns: 15% 40% 45%;
 	grid-template-areas: 
@@ -15,7 +15,7 @@ body {
 }
 
 header {
-	border: 2px solid black;
+	background-color: #FF9546;
 	flex-wrap: wrap;
 	grid-area: header;
 	justify-content: center;
@@ -24,7 +24,7 @@ header {
 
 nav {
 	align-self: center;
-	border: 2px solid black;
+	background-color: #4a6163;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 5px;
@@ -40,7 +40,14 @@ li {
 	margin: 5px;
 }
 
+button {
+	background-color: #ECF6FF;
+	border-radius: 5px;
+	color: #002544;
+}
+
 h1 {
+	color: #002544;
 	height: 11%;
 	margin-bottom: 0px;
 	text-align: center;
@@ -48,35 +55,37 @@ h1 {
 }
 
 h3 {
-	color: firebrick;
+	color: #FF9546;
 	height: 11%;
 	margin: 10px 0px 0px 0px;
 	text-align: center;
 }
 
 main {
-	border: 2px solid black;
+	background-color: #FF9546 ;
 	grid-area: main;
 }
 
 article {
-	border: 2px solid black;
+	background-color: #4a6163;
+	border: 2px solid #002544;
 }
 
 p {
 	align-self: center;
+	color: #FF9546;
 	text-align: center;
 	height: 60%;}
 
 aside {
-	border: 2px solid black;
+	background-color: #FF9546 ;
 	flex-wrap: wrap;
 	grid-area: aside;
 }
 
 form {
 	align-self: center;
-	border: 2px solid black;
+	background-color: #4a6163;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 5px;
@@ -85,6 +94,8 @@ form {
 }
 
 input {
+	background-color: whitesmoke;
+	color: #016ABC;
 	height: 2em;
 	margin: 5px;
 	width: 50%;
@@ -106,18 +117,20 @@ tr {
 }
 
 td {
-	border: 1px solid black;
+	border: 1px solid #002544;
+	color: #FF9546;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	width: 17%;
 }
 
 td:hover {
+	color: #FF9546;
 	overflow: visible;
 }
 
 th {
-	border: 1px solid black;
+	color: #FF9546;
 	width: 17%;
 }
 
@@ -126,7 +139,7 @@ thead {
 }
 
 footer {
-	border: 2px solid black;
+	background-color: #FF9546;
 	grid-area: footer;
 	margin-top: 5px
 }
@@ -135,6 +148,10 @@ footer {
 
 .flex {
 	display: flex;
+}
+
+.border {
+	border: 2px solid #4a6163;
 }
 
 .nav-ul-label {
@@ -149,7 +166,7 @@ footer {
 }
 
 .nav-search-btn:hover {
-	color: blue;
+	color: #016ABC;
 	cursor: pointer;
 }
 
@@ -183,10 +200,12 @@ footer {
 }
 
 .td-link:hover {
+	color: #016ABC;
 	width: 50%;
 }
 
 .th-styles:hover {
+	background-color: #002544;
+	color: #ECF6FF;
 	cursor: pointer;
-	color: blue;
 }
