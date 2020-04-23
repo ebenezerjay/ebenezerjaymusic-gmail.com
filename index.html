@@ -12,30 +12,36 @@
 </head>
 <body>
   <header class="flex border">
+		<img src="ILSlogo.svg" alt="Indie Live Streams.com graphic logo" class="header-logo">
 		<h1>Live Music Streaming Schedule/Under Construction</h1>
 		<nav class="flex border">
-			<form action="" method="POST" class="flex" id="form-search-id">
-				<input name="navSearchInput" type="text" class="nav-search-input border" id="nav-search-input-id" placeholder="Search the live streams" required>
+			<ul class="flex nav-ul">
+				<li id="li-about-id">About</li>
+				<li id="li-feedback-id">Contact</li>
+			</ul>
+			<form action="" method="POST" class="flex form-search" id="form-search-id">
+				<input name="navSearchInput" type="text" class="nav-search-input border" id="nav-search-input-id" placeholder="Search the live streams (by name)" required>
 				<div class="flex nav-bottom">
 					<button type="submit" name="navSearchBtn" class="nav-search-btn border" id="nav-search-btn-id">Submit Search</button>
 				</div>
 			</form>
 		</nav>
-		<form action="" method="POST" class="flex border form-submit" id="form-submit-id">
-			<div class="flex form-left" id="form-left-id">
-				<input type="text" name="formName" class="form-name border" id="form-name-id" placeholder="Name of artist" required>
-				<input type="text" name="formGenre" class="form-genre border" id="form-genre-id-" placeholder="Genre">
-				<input type="text" name="formStreamTime" class="form-streamTime border" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
-			</div>
-			<div class="flex form-right" id="form-right-id">
-				<input type="date" name="formStreamDate" class="form-stream-date border" id="form-stream-date-id" placeholder="Stream Date" required>
-				<input type="text" name="formPlatform" class="form-platform border" id="form-platform-id" placeholder="Streaming platform">
-				<input type="url" name="formStreamLink" class="form-stream-link border" id="form-stream-link-id" placeholder="Link to live stream" required>
-			</div>
-			<div class="flex form-bottom" id="form-bottom-id">
-				<button type="submit" name="formSubmitBtn" class="form-submit-btn border" id="form-submit-btn-id">Submit live stream</button>
-			</div>
-		</form>
+		<article class="article-about flex">
+			<p class="about-paragraph" id="about-paragraph-id">I wanted to find a central place where i could see a calendar or shcedule of music live streams. After doing a brief search, I couldn't find any that 
+				went more than 5 days out. Or they were only for that platform. This site aims to be a hub for finding future music live streams across 
+				all platforms. Enjoy! - Ebenezer
+			</p>
+		</article>
+		<article class="article-comment flex">
+			<form action="" method="POST" class="flex border form-comment" id="form-comment-id">
+				<input type="text" name="name" id="form-name-input-id" class="form-name-input" placeholder="Enter your name here">
+				<input type="email" name="email" id="form-email-input-id" class="form-email-input" placeholder="Enter you email here">
+				<textarea name="commentBox" id="form-comment-box-id"></textarea>
+				<div class="form-comment-bottom flex">
+					<button type="submit" class="flex form-comment-btn" id="form-comment-submit-id">Submit comment/feedback</button>
+				</div>
+			</form>
+		</article>
 	</header>
 	<aside class="flex border">
 		<article class="flex top-aside border">
@@ -47,25 +53,43 @@
 		</article>
 	</aside>
 	<main class="flex border">
-		<article class="border main-article-table">
-			<h3>Upcoming Live Streams</h3>
-			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
-				<thead class="flex">
-					<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
-					<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
-					<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
-					<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
-					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
-					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
-				</thead>
-			<tbody class="flex border" id="data">
-
-			</tbody>
-			</table>
-		</article>
-	</main>
+				<form action="" method="POST" class="flex border form-submit" id="form-submit-id">
+					<div class="flex form-left" id="form-left-id">
+						<input type="text" name="formName" class="form-name border" id="form-name-id" placeholder="Name of artist" required>
+						<input type="text" name="formGenre" class="form-genre border" id="form-genre-id-" placeholder="Genre">
+						<input type="text" name="formStreamTime" class="form-streamTime border" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
+					</div>
+					<div class="flex form-right" id="form-right-id">
+						<input type="date" name="formStreamDate" class="form-stream-date border" id="form-stream-date-id" placeholder="Stream Date" required>
+						<input type="text" name="formPlatform" class="form-platform border" id="form-platform-id" placeholder="Streaming platform">
+						<input type="url" name="formStreamLink" class="form-stream-link border" id="form-stream-link-id" placeholder="Link to live stream" required>
+					</div>
+					<div class="flex form-bottom" id="form-bottom-id">
+						<button type="submit" name="formSubmitBtn" class="form-submit-btn border" id="form-submit-btn-id">Submit live stream</button>
+					</div>
+				</form>
+				<article class="border main-article-table">
+				<h3>Upcoming Live Streams</h3>
+				<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
+					<thead class="flex">
+						<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
+						<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+						<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
+						<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
+						<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
+						<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
+					</thead>
+					<tbody class="flex border" id="data">
+		
+					</tbody>
+				</table>
+				</article>
+			</main>
 	<footer class="flex border">
-
+		<img src="ILSlogo.svg" alt="Kickass Indie Live Streams logo" class="footer-logo">
+		<ul class="border flex footer-ul">
+			<li class="footer-li"><a href="www.indielivestreams.com">Home</a></li>
+		</ul>
 	</footer>
 </body>
 <script src="indieMain.js"></script>
