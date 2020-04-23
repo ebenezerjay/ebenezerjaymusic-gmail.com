@@ -24,12 +24,12 @@ $(document).ready(function() {
 	});
 });
 
-// sends ajax to search php page
+// sends ajax call to search database and display results
 $( "#form-search-id" ).submit(function(e) {
   e.preventDefault();
 	// serialize the form data
 	let	formData = $(this).serialize();
-  // Send the data using post
+  // fetch the data using post
 	$.post( "search.php", formData,function(data) {
 		$("tbody").html(data);
 	});
@@ -90,4 +90,18 @@ $( "#form-submit-id" ).submit(function(e) {
 	$.post( "submitForm.php", formData);
 });
 
+// displays site info
+$(document).ready(function() {
+	$("#li-about-id").on('click', function() {
+		let articleAbout = $("#about-paragraph-id");
+		$(articleAbout).toggleClass("about-paragraph");
+	});
+});
 
+// displays the comment/feedback form
+$(document).ready(function() {
+	$("#li-feedback-id").on('click', function() {
+		let commentForm = $("#form-comment-id");
+		$(commentForm).toggleClass("form-comment");
+	});
+});
