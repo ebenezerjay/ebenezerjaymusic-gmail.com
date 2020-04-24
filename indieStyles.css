@@ -46,6 +46,14 @@ button {
 	background-color: #ECF6FF;
 	border-radius: 5px;
 	color: #002544;
+	height: 48px;
+	width: 45%;
+}
+
+button:hover {
+	color: #FF9546;
+	cursor: pointer;
+	background-color: #002544;
 }
 
 h1 {
@@ -93,13 +101,12 @@ form {
 	justify-content: center;
 	margin: 5px;
 	padding: 1em;
-	width: 100%;
 }
 
 input {
 	background-color: whitesmoke;
 	color: #016ABC;
-	height: 2em;
+	height: 3em;
 	margin: 5px;
 	width: 50%;
 }
@@ -183,27 +190,36 @@ footer {
 	width: 100%;
 }
 
-.nav-bottom {
-	justify-content: center;
-	margin: 10px;
-	width: 100%;
-}
-
-.nav-search-btn:hover {
-	color: #016ABC;
-	cursor: pointer;
+.nav-search-btn {
+	align-self: center;
 }
 
 .top-aside,
 .bottom-aside {
 	height: 47%;
 	margin: 5px auto;
+	padding: 5px;
 	width: 90%;
 }
 
 .top-aside {
 	flex-wrap: wrap;
 	letter-spacing: 3px;
+}
+
+.bottom-aside {
+	flex-wrap: wrap-reverse;
+}
+
+.form-donate {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.form-donate-input {
+  height: 65px;
+	width: 98%;
 }
 
 .article-about,
@@ -215,7 +231,22 @@ footer {
 .about-paragraph,
 .form-comment {
 	display: none;
-	width: 100%; 
+}
+
+.about-paragraph {
+	width: 100%;
+}
+
+.article-comment {
+	justify-content: center;
+}
+
+.form-comment {
+	width: 50%;
+}
+
+.form-comment-box {
+	margin: 5px;
 }
 
 .form-comment-bottom {
@@ -224,12 +255,14 @@ footer {
 }
 
 .form-name-input,
-.form-email-input {
-	width: 50%;
+.form-email-input,
+.form-comment-box {
+	width: 100%;
 }
 
 .form-comment-btn {
 	margin-top: 10px;
+	width: 35%;
 }
 
 .main-top {
@@ -249,6 +282,11 @@ footer {
 
 .form-submit {
 	align-self: flex-start;
+	width: 100%;
+}
+
+.form-submit-btn {
+	width: 20%;
 }
 
 .form-bottom {
@@ -275,7 +313,7 @@ footer {
 }
 
 .footer-logo {
-	width: 15%;
+	width: 13%;
 }
 
 .footer-ul {

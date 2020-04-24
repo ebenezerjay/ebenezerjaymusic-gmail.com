@@ -94,6 +94,7 @@ $( "#form-submit-id" ).submit(function(e) {
 $(document).ready(function() {
 	$("#li-about-id").on('click', function() {
 		let articleAbout = $("#about-paragraph-id");
+		$(".about-paragraph").css("padding", "10px");
 		$(articleAbout).toggleClass("about-paragraph");
 	});
 });
