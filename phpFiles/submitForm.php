@@ -29,10 +29,9 @@ $insertData = $submitData->query($submissionData);
 
 
 if ($insertData) {
-    echo $message;
+    ?> <p> <?php echo $message ?> </p> <?php;
 } else {
     die("Error: {$submitData->errno} : {$submitData->error}");
 }
-
 
 ?>

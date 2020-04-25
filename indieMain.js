@@ -81,13 +81,22 @@ $(document).ready(function() {
 	});
 });
 
-// form data is submitted with ajax call
+// submit stream form data is submitted with ajax call
 $( "#form-submit-id" ).submit(function(e) {
   e.preventDefault();
 	// serialize the form data
 	let	formData = $(this).serialize();
   // Send the data using post
 	$.post( "submitForm.php", formData);
+});
+
+// contact form data is submitted with ajax call
+$("#form-contact-id").submit(function(e) {
+	e.preventDefault();
+	// serialize form data
+	let formData = $(this).serialize();
+	// Send the data using post
+	$.post("contact.php", formData);
 });
 
 // displays site info
@@ -102,7 +111,7 @@ $(document).ready(function() {
 // displays the comment/feedback form
 $(document).ready(function() {
 	$("#li-feedback-id").on('click', function() {
-		let commentForm = $("#form-comment-id");
+		let commentForm = $("#form-contact-id");
 		$(commentForm).toggleClass("form-comment");
 	});
 });
