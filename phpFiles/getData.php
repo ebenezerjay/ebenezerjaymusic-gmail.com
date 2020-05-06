@@ -7,8 +7,13 @@ if ($retreiveData->connect_error) {
 	die('Connect error: ' . $retreiveData->connect_errno . ': ' . $retreiveData->connect_error);
 } 
 
+// select date from table
+// $pastDate = mysqli_query($retreiveData, "SELECT * FROM streamerData");
+
+// echo $pastDate;
+
 // select table data
-$sel = mysqli_query($retreiveData,"SELECT * FROM streamerData ORDER BY streamDate limit 20");
+$sel = mysqli_query($retreiveData, "SELECT * FROM streamerData ORDER BY streamDate limit 20");
 $selLink = mysqli_query($retreiveData,"SELECT link from streamerData");
 
 // loop through table data on database and insert into dom table
