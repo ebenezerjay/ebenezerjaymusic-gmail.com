@@ -87,7 +87,8 @@ $( "#form-submit-id" ).submit(function(e) {
 	// serialize the form data
 	let	formData = $(this).serialize();
   // Send the data using post
-	$.post( "submitForm.php", formData);
+	$.post( "submitForm.php", formData).respsonse(
+		$(".form-submit").html("Thank you for submitting to Indie Live Streams! Refresh the page to see your submission."));
 });
 
 // contact form data is submitted with ajax call
@@ -96,7 +97,8 @@ $("#form-contact-id").submit(function(e) {
 	// serialize form data
 	let formData = $(this).serialize();
 	// Send the data using post
-	$.post("contact.php", formData);
+	$.post("contact.php", formData).respsonse(
+		$(".article-comment").html("Your message has been submitted!"));
 });
 
 // displays site info
