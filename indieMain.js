@@ -24,15 +24,6 @@ $(document).ready(function() {
 	});
 });
 
-// gets all data from the archive table
-$(document).ready(function() {
-	$("#footer-archive-link-id").on('click', function() {
-		$.post("archive.php", function(data) {
-			$("tbody").html(data);
-		});
-	});
-});
-
 // sends ajax call to search database and display results
 $( "#form-search-id" ).submit(function(e) {
   e.preventDefault();

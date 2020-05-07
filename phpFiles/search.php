@@ -10,9 +10,10 @@ if ($searchData->connect_error) {
 // get search text
 $searchText = $_POST['navSearchInput'];
 
+// selects data based on search input
 $query = "SELECT * FROM streamerData WHERE artistName like '%$searchText%' ";
-// $query = $searchData->query("SELECT * FROM streamerData WHERE artistName LIKE '%".$searchText."%' ORDER BY artistName ASC");
 
+// assigns query data to variable
 $result = mysqli_query($searchData,$query);
 
 // loop through table data on database and insert into dom table
