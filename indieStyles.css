@@ -312,6 +312,10 @@ footer {
 	cursor: pointer;
 }
 
+.archive-h3 {
+	color: #002544;
+}
+
 .footer-logo {
 	width: 15%;
 }

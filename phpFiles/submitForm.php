@@ -15,9 +15,7 @@ $time = $_POST['formStreamTime'];
 $platform = $_POST['formPlatform'];
 $link = $_POST['formStreamLink'];
 
-// message to user after submission
-$message = "Thanks for submitting " . $name . "! " . "Your link " . $link . " can be found in the " . $genre . " category. ";
-
+// inserts input data into table
 $submissionData = "INSERT INTO streamerData (artistName,streamDate,streamTime,link,genre,platform) VALUES ('{$submitData->real_escape_string($_POST['formName'])}',
 '{$submitData->real_escape_string($_POST['formStreamDate'])}',
 '{$submitData->real_escape_string($_POST['formStreamTime'])}',
@@ -27,11 +25,14 @@ $submissionData = "INSERT INTO streamerData (artistName,streamDate,streamTime,li
 
 $insertData = $submitData->query($submissionData); 
 
+if ($insertData == 1) {
+	$archivedSubmissionData = "INSERT INTO Archive (artistName,streamDate,link,genre,platform) VALUES ('{$submitData->real_escape_string($_POST['formName'])}',
+	'{$submitData->real_escape_string($_POST['formStreamDate'])}',
+	'{$submitData->real_escape_string($_POST['formStreamLink'])}',
+	'{$submitData->real_escape_string($_POST['formGenre'])}',
+	'{$submitData->real_escape_string($_POST['formPlatform'])}')";
 
-if ($insertData) {
-    ?> <p> <?php echo $message ?> </p> <?php;
-} else {
-    die("Error: {$submitData->errno} : {$submitData->error}");
+	$archivedSubmissionData = $submitData->query($archivedSubmissionData);
 }
 
 ?>
