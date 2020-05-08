@@ -44,7 +44,6 @@ $(document).ready(function() {
 	});
 });
 
-
 // table is sorted by date
 $(document).ready(function() {
 	$(dateSearchRow).on('click', function() {
@@ -83,22 +82,20 @@ $(document).ready(function() {
 
 // submit stream form data is submitted with ajax call
 $( "#form-submit-id" ).submit(function(e) {
-  e.preventDefault();
-	// serialize the form data
-	let	formData = $(this).serialize();
-  // Send the data using post
-	$.post( "submitForm.php", formData).respsonse(
-		$(".form-submit").html("Thank you for submitting to Indie Live Streams! Refresh the page to see your submission."));
+	e.preventDefault();
+	// Send the data using post with a response
+	$.post( "submitForm.php", $(this).serialize(), function() {
+		$(".form-submit").html("Thank you for submitting to Indie Live Streams! Refresh the page to see your submission.");
+	});
 });
 
 // contact form data is submitted with ajax call
 $("#form-contact-id").submit(function(e) {
 	e.preventDefault();
-	// serialize form data
-	let formData = $(this).serialize();
-	// Send the data using post
-	$.post("contact.php", formData).respsonse(
-		$(".article-comment").html("Your message has been submitted!"));
+	// Send the data using post with a response
+	$.post("contact.php", $("#form-contact-id").serialize(), function() {
+		$(".article-comment").html("Your message has been submitted!");
+	});
 });
 
 // displays site info
