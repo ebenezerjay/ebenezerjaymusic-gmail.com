@@ -16,6 +16,10 @@ const platformSearchRow = $("#th-platform-id");
 const navSearchInput = $("#nav-search-input-id");
 const navSearchBtn = $("#nav-search-btn-id");
 
+// sends ajax call to a script that removes expired streams
+$(document).ready(function() {
+	$.post("remove.php");
+});
 
 // gets all table data on page load
 $(document).ready(function() {
