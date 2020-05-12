@@ -26,8 +26,9 @@ $submissionData = "INSERT INTO streamerData (artistName,streamDate,streamTime,li
 $insertData = $submitData->query($submissionData); 
 
 if ($insertData == 1) {
-	$archivedSubmissionData = "INSERT INTO Archive (artistName,streamDate,link,genre,platform) VALUES ('{$submitData->real_escape_string($_POST['formName'])}',
+	$archivedSubmissionData = "INSERT INTO Archive (artistName,streamDate,streamTime,link,genre,platform) VALUES ('{$submitData->real_escape_string($_POST['formName'])}',
 	'{$submitData->real_escape_string($_POST['formStreamDate'])}',
+	'{$submitData->real_escape_string($_POST['formStreamTime'])}',
 	'{$submitData->real_escape_string($_POST['formStreamLink'])}',
 	'{$submitData->real_escape_string($_POST['formGenre'])}',
 	'{$submitData->real_escape_string($_POST['formPlatform'])}')";

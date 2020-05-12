@@ -9,7 +9,9 @@ if ($retreiveData->connect_error) {
 
 // select table data
 $sel = mysqli_query($retreiveData, "SELECT * FROM streamerData ORDER BY streamDate limit 20");
+// $sel .= "DELETE FROM streamerData WHERE streamDate < CURDATE()";
 
+// $insertData = $retreiveData->mysqli_multi_query($sel);
 
 // loop through table data on database and insert into dom table
  if(mysqli_num_rows($sel) > 0) {
