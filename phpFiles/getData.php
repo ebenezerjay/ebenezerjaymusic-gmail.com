@@ -9,9 +9,6 @@ if ($retreiveData->connect_error) {
 
 // select table data
 $sel = mysqli_query($retreiveData, "SELECT * FROM streamerData ORDER BY streamDate limit 20");
-// $sel .= "DELETE FROM streamerData WHERE streamDate < CURDATE()";
-
-// $insertData = $retreiveData->mysqli_multi_query($sel);
 
 // loop through table data on database and insert into dom table
  if(mysqli_num_rows($sel) > 0) {
@@ -21,7 +18,7 @@ $sel = mysqli_query($retreiveData, "SELECT * FROM streamerData ORDER BY streamDa
 			<td class="td-name"><?php echo $submission['artistName']; ?> </a></td>
 			<td class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td class="td-time"><?php echo $submission['streamTime']; ?> </td>
-			<td class="td-link"> <a href=""> <?php echo $submission['link']; ?></a> </td>
+			<td class="td-link"><a href="<?php echo $submission['link'];?>">Web Address For Live Stream</a></td>
 			<td class="td-genre"><?php echo $submission['genre']; ?> </td>
 			<td class="td-platform"><?php echo $submission['platform']; ?> </td>
 		</tr>

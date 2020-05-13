@@ -23,10 +23,17 @@ $(document).ready(function() {
 
 // gets all table data on page load
 $(document).ready(function() {
-	$.post("getData.php", function(data) {
+	$.get("getData.php", function(data) {
 		$("tbody").html(data);
 	});
 });
+
+// $(document).ready(function() {
+// 	$.get("link.php", function(data) {
+// 		$("#td-link").html(data);
+// 	});
+// });
+
 
 // sends ajax call to search database and display results
 $( "#form-search-id" ).submit(function(e) {
