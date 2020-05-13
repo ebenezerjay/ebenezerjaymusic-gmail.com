@@ -18,7 +18,7 @@ if(mysqli_num_rows($timeSortQuery) > 0) {
 			<td dragable="true" class="td-name"><?php echo $submission['artistName']; ?> </td>
 			<td dragable="true" class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td dragable="true" class="td-time"><?php echo $submission['streamTime']; ?> </td>
-			<td dragable="true" class="td-link"><?php echo $submission['link']; ?> </td>
+			<td dragable="true" class="td-link"><a href="<?php echo $submission['link'];?>">Web Address For Live Stream</a></td>
 			<td dragable="true" class="td-genre"><?php echo $submission['genre']; ?> </td>
 			<td dragable="true" class="td-platform"><?php echo $submission['platform']; ?> </td>
 		</tr>

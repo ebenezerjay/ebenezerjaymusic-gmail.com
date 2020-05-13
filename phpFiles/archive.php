@@ -18,7 +18,7 @@ $sel = mysqli_query($retreiveArchiveData,"SELECT * FROM Archive ORDER BY streamD
 			<td class="td-name"><?php echo $submission['artistName']; ?> </a></td>
 			<td class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td class="td-time"><?php echo $submission['streamTime']; ?> </td>
-			<td class="td-link"> <a href=""> <?php echo $submission['link']; ?></a> </td>
+			<td class="td-link"> <a href="<?php echo $submission['link'];?>">Web Address For Live Stream</a></td>
 			<td class="td-genre"><?php echo $submission['genre']; ?> </td>
 			<td class="td-platform"><?php echo $submission['platform']; ?> </td>
 		</tr>
