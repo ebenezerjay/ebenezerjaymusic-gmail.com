@@ -15,7 +15,7 @@
 		<h1>Live Music Streaming Archive/Under Construction</h1>
 		<nav class="flex border">
 			<ul class="flex nav-ul">
-				<li id="li-about-id">About</li>
+				<li id="li-about-id">About Indie Live Streams</li>
 				<li id="li-feedback-id">Contact</li>
 			</ul>
 			<form action="" method="POST" class="flex form-search" id="form-search-id">
@@ -50,26 +50,25 @@
 			<p>
 				Donations to the website are greatly appreciated as I don't get paid to maintain this site.
 			</p>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="flex form-donate" SameSite="none" Secure>
-				<input type="hidden" name="cmd" value="_donations" SameSite="none" Secure/>
-				<input type="hidden" name="business" value="2XLXRRASQ7KU4" SameSite="none" Secure/>
-				<input type="hidden" name="currency_code" value="USD" SameSite="none" Secure/>
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" class="form-donate-input" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" SameSite="none" Secure/>
-				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" SameSite="none" Secure/>
-				</form>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="flex form-donate">
+				<input type="hidden" name="cmd" value="_donations" />
+				<input type="hidden" name="business" value="JUKKCKTUFAHLG" />
+				<input type="hidden" name="currency_code" value="USD" />
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+			</form>
 		</article>
 	</aside>
 	<main class="flex border">
-		<h3 class="archive-h3">Archive of live streams</h3>
+		<h3 class="archive-h3 flex">Archive of live streams</h3>
 		<article class="border main-article-table">
 			<table name="archiveTable" class="flex table-archive" id="table-archive-id">
 				<thead class="flex">
-					<th name="artistName" class="th-artist-name th-styles" id="th-archive-artist-name-id">Artist Name</th>
-					<th name="streamDate" class="th-stream-date th-styles" id="th-archive-stream-date-id">Stream Date</th>
-					<th name="streamTime" class="th-stream-time th-styles" id="th-archive-stream-time-id">Time</th>
-					<th name="streamLink" class="th-stream-link" id="th-archive-stream-link-id">Stream Link</th>
-					<th name="genre" class="th-genre th-styles" id="th-archive-genre-id">Genre</th>
-					<th name="platform" class="th-platform th-styles" id="th-archive-platform-id">Platform</th>
+					<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
+					<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+					<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
+					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
+					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
 				</thead>
 				<tbody class="flex border" id="archive-data">
 
@@ -82,6 +81,8 @@
 		<ul class="border flex footer-ul">
 			<li><a href="index.html">Home Base</a></li>
 			<li><a href="/archive.html">Archive of past streams</a></li>
+			<li id="about-footer-id">About Indie Live Streams</li>
+			<li id="contact-footer-id">Contact</li>
 		</ul>
 	</footer>
 </body>

@@ -109,7 +109,7 @@ $("#form-contact-id").submit(function(e) {
 	});
 });
 
-// displays site info
+// displays site info from nav
 $(document).ready(function() {
 	$("#li-about-id").on('click', function() {
 		let articleAbout = $("#about-paragraph-id");
@@ -118,9 +118,26 @@ $(document).ready(function() {
 	});
 });
 
-// displays the comment/feedback form
+// displays site info from footer
+$(document).ready(function() {
+	$("#about-footer-id").on('click', function() {
+		let articleAbout = $("#about-paragraph-id");
+		$(".about-paragraph").css("padding", "10px");
+		$(articleAbout).toggleClass("about-paragraph");
+	});
+});
+
+// displays the comment/feedback form from nav
 $(document).ready(function() {
 	$("#li-feedback-id").on('click', function() {
+		let commentForm = $("#form-contact-id");
+		$(commentForm).toggleClass("form-comment");
+	});
+});
+
+// displays the comment feedback form from footer
+$(document).ready(function() {
+	$("#contact-footer-id").on('click', function() {
 		let commentForm = $("#form-contact-id");
 		$(commentForm).toggleClass("form-comment");
 	});
