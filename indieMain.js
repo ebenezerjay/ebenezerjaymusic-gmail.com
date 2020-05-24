@@ -21,18 +21,18 @@ $(document).ready(function() {
 	$.post("remove.php");
 });
 
+$(document).ready(function() {
+	$.get("getTodayData.php", function(data) {
+		$("#data1").html(data);
+	});
+});
+
 // gets all table data on page load
 $(document).ready(function() {
 	$.get("getData.php", function(data) {
 		$("tbody").html(data);
 	});
 });
-
-// $(document).ready(function() {
-// 	$.get("link.php", function(data) {
-// 		$("#td-link").html(data);
-// 	});
-// });
 
 
 // sends ajax call to search database and display results
