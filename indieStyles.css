@@ -157,7 +157,7 @@ thead {
 
 footer {
 	background-color: #FF9546;
-	height: fit-content;
+	/* height: fit-content; */
 	grid-area: footer;
 	padding: 5px;
 }
@@ -296,7 +296,8 @@ footer {
 	margin-top: 10px;
 }
 
-.main-article-table {
+.main-article-table,
+.main-article-today-table {
 	height: fit-content;
 	margin: 5px;
 	width: 100%;

@@ -13,7 +13,7 @@
 <body>
   <header class="flex border">
 		<img src="ILSlogo.svg" alt="Indie Live Streams.com graphic logo" class="header-logo">
-		<h1>Live Music Streaming Schedule/Under Construction</h1>
+		<h1>Live Music Streaming Schedule</h1>
 		<nav class="flex border">
 			<ul class="flex nav-ul">
 				<li id="li-about-id">About Indie Live Streams</li>
@@ -49,14 +49,14 @@
 		</article>
 		<article class="flex bottom-aside border">
 			<p>
-				Donations to the website are greatly appreciated as I don't get paid to maintain this site.
+				Donations to help maintain website expenses are greatly appreciated!
 			</p>
 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="flex form-donate">
 				<input type="hidden" name="cmd" value="_donations" />
 				<input type="hidden" name="business" value="JUKKCKTUFAHLG" />
 				<input type="hidden" name="currency_code" value="USD" />
-				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" class="form-donate-input" alt="Donate with PayPal button" />
+				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" />
 			</form>
 		</article>
 	</aside>
@@ -65,7 +65,7 @@
 			<div class="flex form-left" id="form-left-id">
 				<input type="text" name="formName" class="form-name border" id="form-name-id" placeholder="Name of artist" required>
 				<input type="text" name="formGenre" class="form-genre border" id="form-genre-id-" placeholder="Genre">
-				<input type="time" name="formStreamTime" class="form-streamTime border" id="form-stream-time-id" placeholder="Start time of live stream (include timezone)" required>
+				<input type="text" name="formStreamTime" class="form-streamTime border" id="form-stream-time-id" placeholder="Start time of live stream" required>
 			</div>
 			<div class="flex form-right" id="form-right-id">
 				<input type="date" name="formStreamDate" class="form-stream-date border" id="form-stream-date-id" placeholder="Stream Date" required>
@@ -76,21 +76,37 @@
 				<button type="submit" name="formSubmitBtn" class="form-submit-btn border" id="form-submit-btn-id">Submit live stream</button>
 			</div>
 		</form>
+			<article class="border main-article-today-table">
+				<h3>Today's Live Streams</h3>
+				<table name="todayTable" class="flex table-today" id="table-today-id">
+					<thead class="flex">
+						<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
+						<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+						<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
+						<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
+						<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
+						<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
+					</thead>
+					<tbody class="flex border" id="data1">
+						
+					</tbody>
+					</table>
+			</article>
 		<article class="border main-article-table">
-		<h3>Upcoming Live Streams</h3>
-		<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
-			<thead class="flex">
-				<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
-				<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
-				<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
-				<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
-				<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
-				<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
-			</thead>
-			<tbody class="flex border" id="data">
+			<h3>Upcoming Live Streams</h3>
+			<table name="upcomingTable" class="flex table-upcoming" id="table-upcoming-id">
+				<thead class="flex">
+					<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
+					<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+					<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
+					<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
+					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
+					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
+				</thead>
+				<tbody class="flex border" id="data">
 
-			</tbody>
-		</table>
+				</tbody>
+			</table>
 		</article>
 	</main>
 	<footer class="flex border">
