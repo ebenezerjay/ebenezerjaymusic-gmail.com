@@ -7,15 +7,15 @@ $(document).ready(function() {
 
 
 // sends ajax call to search database by name
-// $( "#form-search-id" ).submit(function(e) {
-//     e.preventDefault();
-//       // serialize the form data
-//       let	formData = $(this).serialize();
-//     // fetch the data using post
-//       $.post( "search.php", formData,function(data) {
-//           $("tbody").html(data);
-//       });
-//   });
+$( "#form-search-id" ).submit(function(e) {
+    e.preventDefault();
+      // serialize the form data
+      let	formData = $(this).serialize();
+    // fetch the data using post
+      $.post( "search.php", formData,function(data) {
+          $("tbody").html(data);
+      });
+  });
 
 // displays site info from nav
 $(document).ready(function() {

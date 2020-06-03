@@ -24,13 +24,13 @@
 			</form>
 		</nav>
 		<article class="article-about flex">
-			<p class="about-paragraph" id="about-paragraph-id">I wanted to find a central place where i could see a calendar or shcedule of music live streams. After doing a brief search, I couldn't find any that 
+			<p name="about" class="about-paragraph" id="about-paragraph-id">I wanted to find a central place where i could see a calendar or shcedule of music live streams. After doing a brief search, I couldn't find any that 
 				went more than 5 days out. Or they were only for that platform. This site aims to be a hub for finding future music live streams across 
 				all platforms. Enjoy! - Ebenezer (musician and website developer)
 			</p>
 		</article>
 		<article class="article-comment flex">
-			<form action="" method="POST" class="form-comment" id="form-contact-id">
+			<form name="form-contact" action="" method="POST" class="form-comment" id="form-contact-id">
 				<input type="text" name="contactName" id="form-name-input-id" class="form-name-input" placeholder="Enter your name here">
 				<input type="email" name="contactEmail" id="form-email-input-id" class="form-email-input" placeholder="Enter you email here">
 				<textarea name="contactMessage" id="form-comment-box-id" class="form-comment-box" placeholder="Leave your comment or feedback here..."></textarea>
@@ -66,6 +66,7 @@
 				<thead class="flex">
 					<th name="artistName" class="th-artist-name th-styles" id="th-artist-name-id">Artist Name</th>
 					<th name="streamDate" class="th-stream-date th-styles" id="th-stream-date-id">Stream Date</th>
+					<th name="streamTime" class="th-stream-time th-styles" id="th-stream-time-id">Time</th>
 					<th name="streamLink" class="th-stream-link" id="th-stream-link-id">Stream Link</th>
 					<th name="genre" class="th-genre th-styles" id="th-genre-id">Genre</th>
 					<th name="platform" class="th-platform th-styles" id="th-platform-id">Platform</th>
@@ -81,8 +82,8 @@
 		<ul class="border flex footer-ul">
 			<li><a href="index.html">Home Base</a></li>
 			<li><a href="/archive.html">Archive of past streams</a></li>
-			<li id="about-footer-id">About Indie Live Streams</li>
-			<li id="contact-footer-id">Contact</li>
+			<li id="about-footer-id"><a href="#about-paragraph-id"> About Indie Live Streams</a></li>
+			<li id="contact-footer-id"><a href="#form-contact-id">Contact</a></li>
 		</ul>
 	</footer>
 </body>

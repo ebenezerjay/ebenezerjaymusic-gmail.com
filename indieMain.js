@@ -16,24 +16,17 @@ const platformSearchRow = $("#th-platform-id");
 const navSearchInput = $("#nav-search-input-id");
 const navSearchBtn = $("#nav-search-btn-id");
 
-// sends ajax call to a script that removes expired streams
+// sends ajax call to remove old dates
 $(document).ready(function() {
 	$.post("remove.php");
 });
 
-$(document).ready(function() {
-	$.get("getTodayData.php", function(data) {
-		$("#data1").html(data);
-	});
-});
-
 // gets all table data on page load
 $(document).ready(function() {
-	$.get("getData.php", function(data) {
+	$.post("getData.php", function(data) {
 		$("tbody").html(data);
 	});
 });
-
 
 // sends ajax call to search database and display results
 $( "#form-search-id" ).submit(function(e) {
