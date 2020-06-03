@@ -7,8 +7,10 @@ if ($removeDates->connect_error) {
 	die('Connect error: ' . $removeDates->connect_errno . ': ' . $removeDates->connect_error);
 } 
 
+$curDate = date();
+
 // get dates from table
-$del = "DELETE FROM streamerData WHERE date(streamDate) < current_timestamp";
+$del = "DELETE FROM streamerData WHERE date(streamDate) < $curDate && != $curDate";
 
 $query = $removeDates->query($del);
 

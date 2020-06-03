@@ -1,20 +1,20 @@
 <?php
 // connect to database
-  $retreiveData = new mysqli("localhost:3306", "indieliv_eb", "Helpontheway2112!", "indieliv_Streams");
+  $retreiveTodayData = new mysqli("localhost:3306", "indieliv_eb", "Helpontheway2112!", "indieliv_Streams");
 	
 // check connection 
-if ($retreiveData->connect_error) {
-	die('Connect error: ' . $retreiveData->connect_errno . ': ' . $retreiveData->connect_error);
+if ($retreiveTodayData->connect_error) {
+	die('Connect error: ' . $retreiveTodayData->connect_errno . ': ' . $retreiveTodayData->connect_error);
 } 
 
 // select table data
-$sel = mysqli_query($retreiveData, "SELECT * FROM streamerData WHERE date(streamDate) == current_timestamp");
+$sel1 = mysqli_query($retreiveTodayData, "SELECT streamDate FROM streamerData WHERE date(streamDate) = current_timestamp");
 
 // loop through table data on database and insert into dom table
- if(mysqli_num_rows($sel) > 0) {
-	$submissions = mysqli_fetch_all($sel,MYSQLI_ASSOC);
+ if(mysqli_num_rows($sel1) > 0) {
+	$submissions = mysqli_fetch_all($sel1,MYSQLI_ASSOC);
 	foreach($submissions as $submission) : ?>
-		<tr id="tr-id">
+		<tr id="tr-today-id">
 			<td class="td-name"><?php echo $submission['artistName']; ?> </a></td>
 			<td class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td class="td-time"><?php echo $submission['streamTime']; ?> </td>
@@ -24,7 +24,5 @@ $sel = mysqli_query($retreiveData, "SELECT * FROM streamerData WHERE date(stream
 		</tr>
 		<?php endforeach;
  }
-
-
 
 ?>
