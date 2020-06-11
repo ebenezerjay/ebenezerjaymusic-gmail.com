@@ -8,7 +8,7 @@ if ($retreiveArchiveData->connect_error) {
 } 
 
 // select table data
-$sel = mysqli_query($retreiveArchiveData,"SELECT * FROM Archive ORDER BY streamDate limit 20");
+$sel = mysqli_query($retreiveArchiveData,"SELECT * FROM Archive ORDER BY artistName");
 
 // loop through table data on database and insert into dom table
  if(mysqli_num_rows($sel) > 0) {
@@ -24,7 +24,5 @@ $sel = mysqli_query($retreiveArchiveData,"SELECT * FROM Archive ORDER BY streamD
 		</tr>
 		<?php endforeach;
  }
-
-
 
 ?>

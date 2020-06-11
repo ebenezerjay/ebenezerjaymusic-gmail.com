@@ -13,8 +13,7 @@ const dateSearchRow = $("#th-stream-date-id");
 const timeSearchRow = $("#th-stream-time-id");
 const genreSearchRow = $("#th-genre-id");
 const platformSearchRow = $("#th-platform-id");
-const navSearchInput = $("#nav-search-input-id");
-const navSearchBtn = $("#nav-search-btn-id");
+
 
 // sends ajax call to remove old dates
 $(document).ready(function() {

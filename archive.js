@@ -1,3 +1,4 @@
+
 // gets all data from the archive table
 $(document).ready(function() {
 		$.post("archive.php", function(data) {
@@ -5,9 +6,8 @@ $(document).ready(function() {
 		});
 	});
 
-
 // sends ajax call to search database by name
-$( "#form-search-id" ).submit(function(e) {
+$( "#form-archive-search-id" ).submit(function(e) {
     e.preventDefault();
       // serialize the form data
       let	formData = $(this).serialize();
@@ -16,6 +16,53 @@ $( "#form-search-id" ).submit(function(e) {
           $("tbody").html(data);
       });
   });
+
+// table is sorted by name
+$(document).ready(function() {
+	$("#th-artist-name-id").on('click', function() {
+		$.post("sortNameArchive.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+// table is sorted by date
+$(document).ready(function() {
+	$("#th-stream-date-id").on('click', function() {
+		$.post("sortDateArchive.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+// table is sorted by time
+$(document).ready(function() {
+	$("#th-stream-time-id").on('click', function() {
+		$.post("sortTimeArchive.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+// table is sorted by genre
+$(document).ready(function() {
+	$("#th-genre-id").on('click', function() {
+		$.post("sortGenreArchive.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+// table is sorted by platform
+$(document).ready(function() {
+	$("#th-platform-id").on('click', function() {
+		$.post("sortPlatformArchive.php", function(data) {
+			$("tbody").html(data);
+		});
+	});
+});
+
+
 
 // displays site info from nav
 $(document).ready(function() {

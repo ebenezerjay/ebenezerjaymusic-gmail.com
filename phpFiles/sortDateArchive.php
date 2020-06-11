@@ -8,13 +8,13 @@ if ($sortDisplayData->connect_error) {
 } 
 
 // select table data and sort by name
-$timeSortQuery = mysqli_query($sortDisplayData,"SELECT artistName, streamDate, streamTime, link, genre, platform FROM streamerData ORDER BY streamTime");
+$dateSortQuery = mysqli_query($sortDisplayData,"SELECT artistName, streamDate, streamTime, link, genre, platform FROM Archive ORDER BY streamDate");
 
 // output data of each row
-if(mysqli_num_rows($timeSortQuery) > 0) {
-	$submissions = mysqli_fetch_all($timeSortQuery,MYSQLI_ASSOC);
+if(mysqli_num_rows($dateSortQuery) > 0) {
+	$submissions = mysqli_fetch_all($dateSortQuery,MYSQLI_ASSOC);
 	foreach($submissions as $submission) : ?>
-		<tr id="tr-id-time-sort">
+		<tr id="tr-id-date-sort">
 			<td class="td-name"><?php echo $submission['artistName']; ?> </td>
 			<td class="td-date"><?php echo $submission['streamDate']; ?> </td>
 			<td class="td-time"><?php echo $submission['streamTime']; ?> </td>

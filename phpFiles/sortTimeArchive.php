@@ -8,7 +8,7 @@ if ($sortDisplayData->connect_error) {
 } 
 
 // select table data and sort by name
-$timeSortQuery = mysqli_query($sortDisplayData,"SELECT artistName, streamDate, streamTime, link, genre, platform FROM streamerData ORDER BY streamTime");
+$timeSortQuery = mysqli_query($sortDisplayData,"SELECT artistName, streamDate, streamTime, link, genre, platform FROM Archive ORDER BY streamTime");
 
 // output data of each row
 if(mysqli_num_rows($timeSortQuery) > 0) {
